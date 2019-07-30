@@ -10,7 +10,7 @@ export default function addComment(text) {
   }
 }
 
-export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT'
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 
 export function thumbUpComment(commentId) {
   return {
@@ -19,7 +19,7 @@ export function thumbUpComment(commentId) {
   }
 }
 
-export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT'
+export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 export function thumbDownComment(commentId) {
   return {
@@ -28,7 +28,14 @@ export function thumbDownComment(commentId) {
   }
 }
 
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
+export function removeComment(id) {
+    return {
+        type: REMOVE_COMMENT,
+        id: id
+    }
+}
 
 
 
@@ -60,12 +67,7 @@ export function thumbDownComment(commentId) {
 //     }
 // }
 
-// function removeComment(id) {
-//     return {
-//         type: REMOVE_COMMENT,
-//         id: id
-//     }
-// }
+
 
 // function thumbUpComment(id, nickname, votes) {
 //     return {
